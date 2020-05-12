@@ -3,7 +3,7 @@ package com.example.demo.entity;
 import java.time.LocalDateTime;
 
 /**
- * taskテーブルのエンティティ.
+ * taskテーブルのエンティティ. lombok使用しています.
  * 
  * @author masashi.nose
  *
@@ -19,6 +19,8 @@ public class Task {
 	private Integer typeId;
 	/** タイトル */
 	private String title;
+	/** 詳細 */
+	private String detail;
 	/** 期限 */
 	private LocalDateTime deadline;
 	/** タスクタイプインスタンス */
@@ -26,8 +28,8 @@ public class Task {
 
 	@Override
 	public String toString() {
-		return "Task [id=" + id + ", userId=" + userId + ", typeId=" + typeId + ", title=" + title + ", deadline="
-				+ deadline + ", taskType=" + taskType + "]";
+		return "Task [id=" + id + ", userId=" + userId + ", typeId=" + typeId + ", title=" + title + ", detail="
+				+ detail + ", deadline=" + deadline + ", taskType=" + taskType + "]";
 	}
 
 	public Integer getId() {
@@ -60,6 +62,14 @@ public class Task {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	public String getDetail() {
+		return detail;
+	}
+
+	public void setDetail(String detail) {
+		this.detail = detail;
 	}
 
 	public LocalDateTime getDeadline() {

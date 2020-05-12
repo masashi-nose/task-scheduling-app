@@ -6,6 +6,7 @@ package com.example.demo.entity;
  * @author masashi.nose
  *
  */
+
 public class TaskType {
 	/** ID */
 	private Integer id;
